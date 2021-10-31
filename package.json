@@ -1,0 +1,23 @@
+{
+  "name": "cypress_e-commerce",
+  "version": "1.0.0",
+  "description": "Some challenges for Agile Bootcamp at http://automationpractice.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsreibnitz/Cypress_E-commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fsreibnitz/Cypress_E-commerce/issues"
+  },
+  "homepage": "https://github.com/fsreibnitz/Cypress_E-commerce#readme",
+  "devDependencies": {
+    "cypress": "8.5"
+  }
+}
