@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 1,
-    "start": "2021-11-01T00:44:10.275Z",
-    "end": "2021-11-01T00:44:26.014Z",
-    "duration": 15739,
+    "start": "2021-11-01T00:46:45.177Z",
+    "end": "2021-11-01T00:47:01.389Z",
+    "duration": 16212,
     "testsRegistered": 4,
     "passPercent": 75,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "47e18a0e-7d4b-4213-ba86-49801c54c498",
+      "uuid": "f59aa19e-0d29-49c8-ba3a-2031491dd69a",
       "title": "",
       "fullFile": "cypress/integration/authentication.spec.js",
       "file": "cypress/integration/authentication.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "131555b3-e609-4534-9cdc-ac526b7fb7cd",
+          "uuid": "e5f462c1-b41e-44a6-806b-24983200ee29",
           "title": "Authentication page",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Creating a new account",
               "fullTitle": "Authentication page Creating a new account",
               "timedOut": null,
-              "duration": 6452,
+              "duration": 7390,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(Cypress.config('baseUrl'));\ncy.get('.login').click();\ncy.get('input[name=email_create]').type(faker.internet.email().toLowerCase());\ncy.get('button[name=SubmitCreate]').click();\ncy.get('div.account_creation h3.page-subheading').contains('personal').should('have.text', 'Your personal information');",
               "err": {},
-              "uuid": "82a3cf88-13a2-4e59-9477-16bf1264e23f",
-              "parentUUID": "131555b3-e609-4534-9cdc-ac526b7fb7cd",
+              "uuid": "1f4e7d49-df85-40b1-8da5-c5af7c4adfe5",
+              "parentUUID": "e5f462c1-b41e-44a6-806b-24983200ee29",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Personal Information data",
               "fullTitle": "Authentication page Personal Information data",
               "timedOut": null,
-              "duration": 1701,
+              "duration": 1471,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "//\tcy.visit(Cypress.config('baseUrl'))\ncy.get('input#id_gender1').check();\ncy.get('input[name=customer_firstname]').type(faker.name.firstName());\ncy.get('input[name=customer_lastname]').type(faker.name.lastName());\ncy.get('input[name=passwd').type(faker.internet.password());\ncy.get('select#days').select('2');\ncy.get('select#months').select('May');\ncy.get('select#years').select('1990');",
               "err": {},
-              "uuid": "da7602a5-db0d-4445-a0ce-b60cb3663580",
-              "parentUUID": "131555b3-e609-4534-9cdc-ac526b7fb7cd",
+              "uuid": "47b2db36-6898-42fb-99c1-d03fa25ae6f1",
+              "parentUUID": "e5f462c1-b41e-44a6-806b-24983200ee29",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Your Adress data",
               "fullTitle": "Authentication page Your Adress data",
               "timedOut": null,
-              "duration": 3262,
+              "duration": 3050,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.get('input#firstname').type(faker.name.firstName());\ncy.get('input#lastname').type(faker.name.lastName());\ncy.get('input#address1').type(faker.address.streetAddress());\ncy.get('input#city').type(faker.address.city());\ncy.get('select#id_country').select('United States');\ncy.get('select#id_state').select('Georgia');\ncy.get('input#postcode').type(faker.address.zipCode());\ncy.get('input#phone_mobile').type(faker.phone.phoneNumber('0165#######'));\ncy.get('button#submitAccount').click();",
               "err": {},
-              "uuid": "7f6a020f-e7e2-4465-b1e3-2bf18fbbe613",
-              "parentUUID": "131555b3-e609-4534-9cdc-ac526b7fb7cd",
+              "uuid": "420e5d9d-c6c0-498e-ab57-60a51f1670c4",
+              "parentUUID": "e5f462c1-b41e-44a6-806b-24983200ee29",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "Account successfully created",
               "fullTitle": "Authentication page Account successfully created",
               "timedOut": null,
-              "duration": 4205,
+              "duration": 4193,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -105,24 +105,24 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://automationpractice.com/index.php?controller=authentication' to equal 'http://automationpractice.com/index.php?controller=my-account'\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/authentication.spec.js:132:14)",
                 "diff": "- 'http://automationpractice.com/index.php?controller=authentication'\n+ 'http://automationpractice.com/index.php?controller=my-account'\n"
               },
-              "uuid": "1e34f106-78cc-4b61-ab2a-1cebe4b605f3",
-              "parentUUID": "131555b3-e609-4534-9cdc-ac526b7fb7cd",
+              "uuid": "1e49db94-1536-4d59-b391-f54400eb018b",
+              "parentUUID": "e5f462c1-b41e-44a6-806b-24983200ee29",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "82a3cf88-13a2-4e59-9477-16bf1264e23f",
-            "da7602a5-db0d-4445-a0ce-b60cb3663580",
-            "7f6a020f-e7e2-4465-b1e3-2bf18fbbe613"
+            "1f4e7d49-df85-40b1-8da5-c5af7c4adfe5",
+            "47b2db36-6898-42fb-99c1-d03fa25ae6f1",
+            "420e5d9d-c6c0-498e-ab57-60a51f1670c4"
           ],
           "failures": [
-            "1e34f106-78cc-4b61-ab2a-1cebe4b605f3"
+            "1e49db94-1536-4d59-b391-f54400eb018b"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 15620,
+          "duration": 16104,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
