@@ -34,19 +34,23 @@ describe('Authentication page', () => {
 				cy.get('select#id_state').select('Georgia')
 				cy.get('input#postcode').type(faker.address.zipCode('#####'))
 				cy.get('input#phone_mobile').type(faker.phone.phoneNumber('0165#######'))
-				cy.get('button#submitAccount').click()
 			});
 
 		
 			it('Account successfully created', () => {
-				// cy.intercept({
-				// 	method: "POST",
-				// 	url: "**index.php?controller=my-account*",
-				// }).as("myAccount");
+				cy.intercept('GET','**index.php?controller=my-account'
+				).as("myAccount");
 
-				// cy.wait("@myAccount").then((response) => {
-				// 	expect(response.status).to.eq(200);
-				// });
+				cy.get('button#submitAccount').click()
+
+			
+
+				cy.wait("@myAccount")
+				cy.get("@myAccount").then((resMyaccont) => {
+					console.log(resMyaccont)
+					expect(resMyaccont.response.statusCode).to.eq(200);
+				});
+
 				cy.url().should('eq',  Cypress.config().baseUrl + 'index.php?controller=my-account')
 
 			
