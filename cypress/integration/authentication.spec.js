@@ -4,7 +4,7 @@ var faker = require('faker')
 
 describe('Authentication page', () => {
 	it('Creating a new account', () => {
-		cy.visit(Cypress.config('baseUrl'))
+		cy.visit('/')
 		cy.get('.login').click()
 		cy.get('input[name=email_create]').type(faker.internet.email().toLowerCase())
 		cy.get('button[name=SubmitCreate]').click()
@@ -13,7 +13,6 @@ describe('Authentication page', () => {
 
 
 		it('Personal Information data', () => {
-		//	cy.visit(Cypress.config('baseUrl'))
 			cy.get('input#id_gender1').check()
 			cy.get('input[name=customer_firstname]').type(faker.name.firstName())
 			cy.get('input[name=customer_lastname]').type(faker.name.lastName())
