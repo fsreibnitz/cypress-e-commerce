@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2021-11-02T11:05:56.506Z",
-    "end": "2021-11-02T11:06:08.041Z",
-    "duration": 11535,
+    "failures": 1,
+    "start": "2021-11-02T15:46:46.223Z",
+    "end": "2021-11-02T15:47:15.214Z",
+    "duration": 28991,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2525e95e-f0d1-4f5f-bb16-c666cda103fa",
+      "uuid": "d5ff835b-d596-4d7c-ba75-36c249822edd",
       "title": "",
       "fullFile": "cypress/integration/authentication.spec.js",
       "file": "cypress/integration/authentication.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5e31a04c-61bd-4e6b-9cdf-9e6dfde45f34",
+          "uuid": "47b599b3-334d-4b8c-b7e5-24886d80c977",
           "title": "Authentication page",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Creating a new account",
               "fullTitle": "Authentication page Creating a new account",
               "timedOut": null,
-              "duration": 11489,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 28925,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.visit(\"/\");\ncy.get(\".login\").click();\ncy.get(\"input[name=email_create]\").type(faker.internet.email().toLowerCase());\ncy.get(\"button[name=SubmitCreate]\").click();\ncy.url().should(\"include\", \"account-creation\");\ncy.log(\"**Personal Information data**\");\ncy.get(\"input#id_gender1\").check();\ncy.get(\"input[name=customer_firstname]\").type(faker.name.firstName());\ncy.get(\"input[name=customer_lastname]\").type(faker.name.lastName());\ncy.get(\"input[name=passwd\").type(faker.internet.password());\ncy.get(\"select#days\").select(\"2\");\ncy.get(\"select#months\").select(\"May\");\ncy.get(\"select#years\").select(\"1990\");\ncy.log(\"**Your Adress data**\");\ncy.get(\"input#firstname\").type(faker.name.firstName());\ncy.get(\"input#lastname\").type(faker.name.lastName());\ncy.get(\"input#address1\").type(faker.address.streetAddress());\ncy.get(\"input#city\").type(faker.address.city());\ncy.get(\"select#id_country\").select(\"United States\");\ncy.get(\"select#id_state\").select(\"Georgia\");\ncy.get(\"input#postcode\").type(faker.address.zipCode(\"#####\"));\ncy.get(\"input#phone_mobile\").type(faker.phone.phoneNumber(\"0165#######\"));\ncy.get(\"button#submitAccount\").click();\ncy.log(\"**Account successfully created**\");\ncy.url().should(\"eq\", Cypress.config().baseUrl + \"index.php?controller=my-account\");",
-              "err": {},
-              "uuid": "fd6871eb-f0f6-48f5-8f20-28acfa95051c",
-              "parentUUID": "5e31a04c-61bd-4e6b-9cdf-9e6dfde45f34",
+              "code": "cy.visit('/');\ncy.get('.login').click();\ncy.get('input[name=email_create]').type(faker.internet.email().toLowerCase());\ncy.get('button[name=SubmitCreate]').click();\ncy.url().should('include', 'account-creation');\ncy.log('**Personal Information data**');\ncy.get('input#id_gender1').check();\ncy.get('input[name=customer_firstname]').type(faker.name.firstName());\ncy.get('input[name=customer_lastname]').type(faker.name.lastName());\ncy.get('input[name=passwd').type(faker.internet.password());\ncy.get('select#days').select('2');\ncy.get('select#months').select('May');\ncy.get('select#years').select('1990');\ncy.log('**Your Adress data**');\ncy.get('input#firstname').type(faker.name.firstName());\ncy.get('input#lastname').type(faker.name.lastName());\ncy.get('input#address1').type(faker.address.streetAddress());\ncy.get('input#city').type(faker.address.city());\ncy.get('select#id_country').select('United States');\ncy.get('select#id_state').select('Georgia');\ncy.get('input#postcode').type(faker.address.zipCode('#####'));\ncy.get('input#phone_mobile').type(faker.phone.phoneNumber('0165#######'));\ncy.get('button#submitAccount').click();\ncy.log('**Account successfully created**');\ncy.url().should('eq', Cypress.config().baseUrl + 'index.php?controller=my-account');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://automationpractice.com/index.php?controller=authentication&back=my-account' to include 'account-creation'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://automationpractice.com/index.php?controller=authentication&back=my-account' to include 'account-creation'\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/authentication.spec.js:108:14)",
+                "diff": null
+              },
+              "uuid": "0289bec1-114b-438e-a0ca-1007d46914ab",
+              "parentUUID": "47b599b3-334d-4b8c-b7e5-24886d80c977",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "fd6871eb-f0f6-48f5-8f20-28acfa95051c"
+          "passes": [],
+          "failures": [
+            "0289bec1-114b-438e-a0ca-1007d46914ab"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11489,
+          "duration": 28925,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
